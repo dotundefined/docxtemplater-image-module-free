@@ -130,9 +130,10 @@ var ImageModule = function () {
 			});
 			if (!tagValue) {
 				return { value: this.fileTypeConfig.tagTextXml };
-			} else if ((typeof tagValue === "undefined" ? "undefined" : _typeof(tagValue)) === "object") {
-				return this.getRenderedPart(part, tagValue.rId, tagValue.sizePixel);
-			}
+			} 
+			// else if ((typeof tagValue === "undefined" ? "undefined" : _typeof(tagValue)) === "object") {
+			// 	return this.getRenderedPart(part, tagValue.rId, tagValue.sizePixel);
+			// }
 			
 			var imgManager = new ImgManager(this.zip, options.filePath, this.xmlDocuments, this.fileType);
 			var imgBuffer = this.options.getImage(tagValue, part.value);
